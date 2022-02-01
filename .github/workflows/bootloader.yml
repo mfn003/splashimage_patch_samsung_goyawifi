@@ -1,0 +1,49 @@
+# Copyright (C) 2022  TriDiscord
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see https://www.gnu.org/licenses/.
+
+name: SM-T110 KK Bootloader Patch CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: TWRP Build CI
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setting up files
+        run: chmod -R 777 extract-jpg.sh inject-jpg.sh kk_assets/6.jpg kk_assets/11.jpg
+
+      - name: Extracting stock bootloader
+        run: ./extract-jpg.sh param_stock.lfs
+
+      - name: Copying KitKat bootloader images
+        run: cp kk_assets/* .
+
+      - name: Replacing bootloader images
+        run: ./inject-jpg.sh param_stock.lfs param.lfs
+
+      - name: Uploading bootloader
+        uses: actions/upload-artifact@v2
+        with:
+          name: param
+          path: /home/runner/samsung_kitkat_bootloader_image_goyawifi/samsung_kitkat_bootloader_image_goyawifi/param.lfs
