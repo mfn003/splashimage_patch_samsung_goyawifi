@@ -41,12 +41,9 @@ jobs:
 
       - name: Replacing bootloader images
         run: ./inject-jpg.sh param_stock.lfs param.lfs
-      
-      - name: DEBUG Test file path
-        run: echo $PWD
 
       - name: Uploading bootloader
         uses: actions/upload-artifact@v2
         with:
           name: param
-          path: /home/runner/samsung_kitkat_bootloader_image_goyawifi/samsung_kitkat_bootloader_image_goyawifi/param.lfs
+          path: /home/runner/work/samsung_kitkat_bootloader_image_goyawifi/samsung_kitkat_bootloader_image_goyawifi/param.lfs
