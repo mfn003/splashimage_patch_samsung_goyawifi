@@ -11,4 +11,4 @@
 - I am not responsible for bricked bootloaders
 - For the SM-T110 *ONLY*, if you flash it to the SM-T111, Odin Mode will show the wrong product name
 
-## [Download](https://github.com/TriDiscord/samsung_bootloader_image_goyawifi/releases/latest "Latest release for TriDiscord/samsung_bootloader_image_goyawifi" )
+## [Download](https://github.com/TriDiscord/splashimage_patch_samsung_goyawifi/releases/latest "Latest release for TriDiscord/splashimage_patch_samsung_goyawifi" )
