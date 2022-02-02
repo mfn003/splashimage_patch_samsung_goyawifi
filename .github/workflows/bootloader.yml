@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setting up files
-        run: chmod -R 777 extract-jpg.sh inject-jpg.sh kk_assets/6.jpg kk_assets/11.jpg
+        run: chmod -R 777 extract-jpg.sh inject-jpg.sh assets/6.jpg assets/11.jpg
 
       - name: Extracting stock bootloader
         run: ./extract-jpg.sh param_stock.lfs
