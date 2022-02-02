@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see https://www.gnu.org/licenses/.
 
-name: SM-T110 KK Bootloader Patch CI
+name: SM-T110 Bootloader Patch CI
 
 on:
   workflow_dispatch:
@@ -36,8 +36,8 @@ jobs:
       - name: Extracting stock bootloader
         run: ./extract-jpg.sh param_stock.lfs
 
-      - name: Copying KitKat bootloader images
-        run: cp kk_assets/* .
+      - name: Copying new bootloader images
+        run: cp assets/* .
 
       - name: Replacing bootloader images
         run: ./inject-jpg.sh param_stock.lfs param.lfs
@@ -46,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: param
-          path: /home/runner/work/samsung_kitkat_bootloader_image_goyawifi/samsung_kitkat_bootloader_image_goyawifi/param.lfs
+          path: /home/runner/work/samsung_bootloader_image_goyawifi/samsung_bootloader_image_goyawifi/param.lfs

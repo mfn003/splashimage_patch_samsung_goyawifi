@@ -1,8 +1,8 @@
-# Bootloader patch to SM-T110 for KitKat bootloader images
+# Bootloader patch to SM-T110 for new bootloader images
 
 ## Info
 
-- Adds the `POWERED BY android` logo at the bottom
+- Adds the Android branding to the bottom
 - Removes product name from boot screen
 - Fixes the custom kernel warning boot image
 
@@ -11,4 +11,4 @@
 - I am not responsible for bricked bootloaders
 - For the SM-T110 *ONLY*, if you flash it to the SM-T111, Odin Mode will show the wrong product name
 
-## [Download](https://github.com/TriDiscord/samsung_kitkat_bootloader_image_goyawifi/releases "Releases for TriDiscord/samsung_kitkat_bootloader_image_goyawifi" )
+## [Download](https://github.com/TriDiscord/samsung_bootloader_image_goyawifi/releases "Releases for TriDiscord/samsung_bootloader_image_goyawifi" )
