@@ -3,12 +3,7 @@
 ## Warning
 
 You should only flash the bootloader on the SM-T110.
-
-You should only flash the region that the branch is supposed to be for.
-
-## Contributing
-
-If you want to contribute to this project for a region that isn't available on the branch list, please see the [contributing guide](CONTRIBUTING.md).
+Flashing the bootloader on any other device will cause serious damage.
 
 ## Info
 
